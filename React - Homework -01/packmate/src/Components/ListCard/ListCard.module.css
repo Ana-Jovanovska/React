@@ -1,0 +1,19 @@
+.ListCard {
+  padding: 20px;
+  border-radius: 10px;
+  background: #e60026;
+  width: 200px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.packed {
+  background-color: rgb(37, 161, 37);
+  border-radius: 10px;
+}
