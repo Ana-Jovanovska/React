@@ -1,0 +1,135 @@
+[
+  {
+    "id": "1",
+    "description": "Toothbrush",
+    "quantity": 1,
+    "isPacked": true,
+    "category": "toiletries"
+  },
+  {
+    "id": "2",
+    "description": "Toothpaste",
+    "quantity": 1,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "3",
+    "description": "Shampoo",
+    "quantity": 2,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "4",
+    "description": "Perfume",
+    "quantity": 4,
+    "isPacked": true,
+    "category": "toiletries"
+  },
+  {
+    "id": "5",
+    "description": "Deodorant",
+    "quantity": 2,
+    "isPacked": true,
+    "category": "toiletries"
+  },
+  {
+    "id": "6",
+    "description": "Sunscreen",
+    "quantity": 3,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "7",
+    "description": "Nail Clippers",
+    "quantity": 1,
+    "isPacked": true,
+    "category": "toiletries"
+  },
+  {
+    "id": "8",
+    "description": "Hairbrush",
+    "quantity": 2,
+    "isPacked": true,
+    "category": "toiletries"
+  },
+  {
+    "id": "9",
+    "description": "Lip Balm",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "toiletries"
+  },
+  {
+    "id": "10",
+    "description": "Tops",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "11",
+    "description": "Passport",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "12",
+    "description": "Sweater",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "13",
+    "description": "Jacket",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "14",
+    "description": "Jeans",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "15",
+    "description": "Shorts",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "16",
+    "description": "Swim trunks",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "17",
+    "description": "Underwear",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "18",
+    "description": "Socks",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  },
+  {
+    "id": "19",
+    "description": "Shoes",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "essentials"
+  }
+]
