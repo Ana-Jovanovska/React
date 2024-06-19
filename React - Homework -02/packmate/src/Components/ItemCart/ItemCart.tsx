@@ -18,7 +18,7 @@ function ItemCart({
 }: ItemCartProps) {
   return (
     <div className="ItemCart">
-      <p className="text">{item.description}</p>
+      <h3 className="text">{item.description}</h3>
       <div className="info">
         <p>Quantity:</p>
         <button
@@ -39,7 +39,7 @@ function ItemCart({
       </div>
 
       <div className="isPacked-info">
-        <p>Packed:</p>
+        <span>Packed:</span>
         <button
           className="button"
           onClick={() => {

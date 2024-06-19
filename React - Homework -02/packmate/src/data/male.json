@@ -64,69 +64,76 @@
   },
   {
     "id": "10",
+    "description": "Soap",
+    "quantity": 3,
+    "isPacked": true,
+    "category": "toiletries"
+  },
+  {
+    "id": "11",
     "description": "Shirts",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "11",
+    "id": "12",
     "description": "Passport",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "12",
+    "id": "13",
     "description": "Sweater",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "13",
+    "id": "14",
     "description": "Jacket",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "14",
+    "id": "15",
     "description": "Jeans",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "15",
+    "id": "16",
     "description": "Shorts",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "16",
+    "id": "17",
     "description": "Swim trunks",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "17",
+    "id": "18",
     "description": "ID card",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "18",
+    "id": "19",
     "description": "Socks",
     "quantity": 3,
     "isPacked": true,
     "category": "essentials"
   },
   {
-    "id": "19",
+    "id": "20",
     "description": "Driver's license",
     "quantity": 3,
     "isPacked": true,

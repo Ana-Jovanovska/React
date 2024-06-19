@@ -57,23 +57,22 @@ function ItemList({
       </div>
       <div className="Results">
         <div className="totalItems">
-          <h3>Total number of items:</h3>
-          <p>{model.length}</p>
+          <strong>Total items:{model.length}</strong>
         </div>
         <div className="totalQuantity">
-          <h3>Total quantity of all items:</h3>
+          <strong>Total quantity:</strong>
         </div>
         <div className="countOfPackedItems">
-          <h3>
+          <strong>
             Count of packed items:
             {model.filter((item) => item.isPacked).length}
-          </h3>
+          </strong>
         </div>
         <div className="countOfUnpackedItems">
-          <h3>
+          <strong>
             Count of unpacked items:
             {model.filter((item) => !item.isPacked).length}
-          </h3>
+          </strong>
         </div>
       </div>
     </div>

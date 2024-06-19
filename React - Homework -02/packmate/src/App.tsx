@@ -125,7 +125,20 @@ function App() {
     <section className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/item-page/:gender" element={<ItemListPage />} />
+        <Route
+          path="/item-page/:gender"
+          element={
+            <ItemListPage
+              gender={gender}
+              maleModel={maleItem}
+              femaleModel={femaleItem}
+              addQuntityItem={addQuntityItem}
+              removeQuntityItem={removeQuntityItem}
+              isPackedItem={isPackedItem}
+              removeIsPackedItem={removeIsPackedItem}
+            />
+          }
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </section>

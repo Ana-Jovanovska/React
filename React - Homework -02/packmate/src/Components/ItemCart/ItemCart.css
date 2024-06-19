@@ -1,1 +1,37 @@
+.ItemCart {
+  width: 550px;
+  background-color: #b3bb96;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.info {
+  display: flex;
+  gap: 10px;
+}
 
+.info p {
+  display: flex;
+  justify-content: center;
+}
+
+.info button {
+  font-size: 15px;
+  min-width: 70px;
+  border-radius: 100px;
+  border: 1px solid darkgray;
+}
+.isPacked-info {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.isPacked-info button {
+  font-size: 15px;
+  min-height: 50px;
+  min-width: 70px;
+  border-radius: 100px;
+  border: 1px solid darkgray;
+}

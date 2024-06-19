@@ -3,10 +3,12 @@ import { LinkData } from "../../models/core.model";
 import Header from "../../Layout/Header/Header";
 import Footer from "../../Layout/Footer/Footer";
 import { Item } from "../../models/item.model";
+import ItemList from "../../Components/ItemList/ItemList";
 
 interface ItemListPageProps {
-  gender: Item;
-  data: Item[];
+  gender: string | undefined;
+  maleModel: Item[];
+  femaleModel: Item[];
   addQuntityItem: (selectedItem: Item) => void;
   removeQuntityItem: (selectedItem: Item) => void;
   isPackedItem: (selectedItem: Item) => void;
@@ -14,7 +16,9 @@ interface ItemListPageProps {
 }
 
 function ItemListPage({
-  data,
+  gender,
+  maleModel,
+  femaleModel,
   addQuntityItem,
   removeQuntityItem,
   isPackedItem,
@@ -27,8 +31,27 @@ function ItemListPage({
     },
   ];
   return (
-    <div className="ItemPage">
+    <div className="ItemListPage">
       <Header title="🧳PackMate" linkDataArr={linkDataArr} />
+      <div className="container">
+        {gender === "male" ? (
+          <ItemList
+            model={maleModel}
+            isPackedItem={isPackedItem}
+            removeIsPackedItem={removeIsPackedItem}
+            addQuntityItem={addQuntityItem}
+            removeQuntityItem={removeQuntityItem}
+          />
+        ) : (
+          <ItemList
+            model={femaleModel}
+            isPackedItem={isPackedItem}
+            removeIsPackedItem={removeIsPackedItem}
+            addQuntityItem={addQuntityItem}
+            removeQuntityItem={removeQuntityItem}
+          />
+        )}
+      </div>
 
       <Footer />
     </div>
