@@ -18,10 +18,9 @@ function App() {
       setMaleItems((prevItem) => {
         return prevItem.map((item) => {
           if (item.id === selectItem.id) {
-            item.quantity++;
             return item;
           } else {
-            return item;
+            return { ...item, quantity: item.quantity + 1 };
           }
         });
       });
@@ -30,10 +29,9 @@ function App() {
       setFemaleItems((prevItem) => {
         return prevItem.map((item) => {
           if (item.id === selectItem.id) {
-            item.quantity++;
             return item;
           } else {
-            return item;
+            return { ...item, quantity: item.quantity + 1 };
           }
         });
       });
@@ -45,10 +43,9 @@ function App() {
       setMaleItems((prevItem) => {
         return prevItem.map((item) => {
           if (item.id === selectItem.id && item.quantity !== 0) {
-            item.quantity++;
             return item;
           } else {
-            return item;
+            return { ...item, quantity: item.quantity - 1 };
           }
         });
       });
@@ -57,10 +54,9 @@ function App() {
       setFemaleItems((prevItem) => {
         return prevItem.map((item) => {
           if (item.id === selectItem.id && item.quantity !== 0) {
-            item.quantity++;
             return item;
           } else {
-            return item;
+            return { ...item, quantity: item.quantity - 1 };
           }
         });
       });
