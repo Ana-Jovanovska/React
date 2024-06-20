@@ -17,6 +17,14 @@ function ItemList({
   isPackedItem,
   removeIsPackedItem,
 }: ItemListPageProps) {
+  let sum = 0;
+  const totalQuantity = (sum: number) => {
+    model.map((model) => {
+      sum += model.quantity;
+    });
+    return sum;
+  };
+
   return (
     <div className="ItemList">
       <div className="essentials">
@@ -60,7 +68,10 @@ function ItemList({
           <strong>Total items:{model.length}</strong>
         </div>
         <div className="totalQuantity">
-          <strong>Total quantity:</strong>
+          <strong>
+            Total quantity:
+            {totalQuantity(sum)}
+          </strong>
         </div>
         <div className="countOfPackedItems">
           <strong>

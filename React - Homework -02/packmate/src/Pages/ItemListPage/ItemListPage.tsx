@@ -4,26 +4,121 @@ import Header from "../../Layout/Header/Header";
 import Footer from "../../Layout/Footer/Footer";
 import { Item } from "../../models/item.model";
 import ItemList from "../../Components/ItemList/ItemList";
+import { useState } from "react";
+import maleJSON from "../../data/male.json";
+import femaleJSON from "../../data/female.json";
+import { useParams } from "react-router-dom";
 
-interface ItemListPageProps {
-  gender: string | undefined;
-  maleModel: Item[];
-  femaleModel: Item[];
-  addQuntityItem: (selectedItem: Item) => void;
-  removeQuntityItem: (selectedItem: Item) => void;
-  isPackedItem: (selectedItem: Item) => void;
-  removeIsPackedItem: (selectedItem: Item) => void;
-}
+function ItemListPage() {
+  const [maleItem, setMaleItems] = useState<Item[]>(maleJSON);
+  const [femaleItem, setFemaleItems] = useState<Item[]>(femaleJSON);
+  const { gender } = useParams();
+  console.log(gender);
 
-function ItemListPage({
-  gender,
-  maleModel,
-  femaleModel,
-  addQuntityItem,
-  removeQuntityItem,
-  isPackedItem,
-  removeIsPackedItem,
-}: ItemListPageProps) {
+  const addQuntityItem = (selectItem: Item) => {
+    if (gender === "male") {
+      setMaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectItem.id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+    if (gender === "female") {
+      setFemaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectItem.id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+  };
+
+  const removeQuntityItem = (selectItem: Item) => {
+    if (gender === "male") {
+      setMaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectItem.id && item.quantity !== 0) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+    if (gender === "female") {
+      setFemaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectItem.id && item.quantity !== 0) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+  };
+
+  const isPackedItem = (selectedItem: Item) => {
+    if (gender === "male") {
+      setMaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectedItem.id) {
+            item.isPacked = true;
+            return item;
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+    if (gender === "female") {
+      setFemaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectedItem.id) {
+            item.isPacked = true;
+            return item;
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+  };
+
+  const removeIsPackedItem = (selectedItem: Item) => {
+    if (gender === "male") {
+      setMaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectedItem.id) {
+            item.isPacked = false;
+            return item;
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+    if (gender === "female") {
+      setFemaleItems((prevItem) => {
+        return prevItem.map((item) => {
+          if (item.id === selectedItem.id) {
+            item.isPacked = false;
+            return item;
+          } else {
+            return item;
+          }
+        });
+      });
+    }
+  };
+
   const linkDataArr: LinkData[] = [
     {
       path: "/home",
@@ -36,7 +131,7 @@ function ItemListPage({
       <div className="container">
         {gender === "male" ? (
           <ItemList
-            model={maleModel}
+            model={maleItem}
             isPackedItem={isPackedItem}
             removeIsPackedItem={removeIsPackedItem}
             addQuntityItem={addQuntityItem}
@@ -44,7 +139,7 @@ function ItemListPage({
           />
         ) : (
           <ItemList
-            model={femaleModel}
+            model={femaleItem}
             isPackedItem={isPackedItem}
             removeIsPackedItem={removeIsPackedItem}
             addQuntityItem={addQuntityItem}
