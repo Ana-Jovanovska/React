@@ -5,6 +5,7 @@ import { onSubmit } from "../../state/slice/tripDetails.slice";
 import { useForm } from "react-hook-form";
 import { LinkData } from "../../models/core.model";
 import Header from "../../Layout/Header/Header";
+import Footer from "../../Layout/Footer/Footer";
 
 export interface FormValues {
   firstName: string;
@@ -40,13 +41,13 @@ function TripDetailsPage() {
   return (
     <section className="TripDetailsPage">
       <Header title="🧳PackMate" linkDataArr={linkDataArr} />
+      <h1>Trip Details Page</h1>
       <form
-        className="trip-details-form"
+        className="trip-form"
         onSubmit={handleSubmit((item) => {
           dispatch(onSubmit(item));
         })}
       >
-        <h2>Enter your details here:</h2>
         <input
           type="text"
           placeholder="First Name"
@@ -82,7 +83,7 @@ function TripDetailsPage() {
             required: { value: true, message: "Phone number is required!" },
           })}
         />
-        <div className="error-add-button-div">
+        <div className="error">
           <div>
             {!isValid && isSubmitted ? (
               <div style={{ color: "red" }}>Are fields are required</div>
@@ -94,16 +95,17 @@ function TripDetailsPage() {
         </div>
       </form>
       {isValid && isSubmitted && (
-        <div className="display-trip-btn">
+        <div className="btn">
           <button
             onClick={() => {
               navigate("/summary");
             }}
           >
-            Display Trip Data
+            Next
           </button>
         </div>
       )}
+      <Footer />
     </section>
   );
 }
