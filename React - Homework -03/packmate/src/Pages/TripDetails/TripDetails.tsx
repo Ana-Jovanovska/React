@@ -1,8 +1,10 @@
-import "./TripDetailsPage.css";
+import "./TripDetails.css";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../utils/hooks";
 import { onSubmit } from "../../state/slice/tripDetails.slice";
 import { useForm } from "react-hook-form";
+import { LinkData } from "../../models/core.model";
+import Header from "../../Layout/Header/Header";
 
 export interface FormValues {
   firstName: string;
@@ -13,6 +15,12 @@ export interface FormValues {
 }
 
 function TripDetailsPage() {
+  const linkDataArr: LinkData[] = [
+    {
+      path: "/home",
+      text: "HOME",
+    },
+  ];
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const {
@@ -31,6 +39,7 @@ function TripDetailsPage() {
 
   return (
     <section className="TripDetailsPage">
+      <Header title="🧳PackMate" linkDataArr={linkDataArr} />
       <form
         className="trip-details-form"
         onSubmit={handleSubmit((item) => {

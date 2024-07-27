@@ -81,6 +81,7 @@
   },
   {
     "id": "11",
+    "gender": "female",
     "description": "Tops",
     "quantity": 0,
     "isPacked": false,
@@ -88,6 +89,7 @@
   },
   {
     "id": "12",
+    "gender": "female",
     "description": "Passport",
     "quantity": 0,
     "isPacked": false,
