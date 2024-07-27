@@ -86,7 +86,7 @@ function TripDetailsPage() {
         <div className="error">
           <div>
             {!isValid && isSubmitted ? (
-              <div style={{ color: "red" }}>Are fields are required</div>
+              <div>All fields are required</div>
             ) : null}
           </div>
           <button className="add-button" type="submit">
