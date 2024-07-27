@@ -1,0 +1,6 @@
+.destination-container h1 {
+  display: grid;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 40px;
+}

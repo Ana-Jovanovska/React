@@ -1,0 +1,320 @@
+[
+  {
+    "id": "1",
+    "gender": "female",
+    "description": "Toothbrush",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "2",
+    "gender": "female",
+    "description": "Toothpaste",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "3",
+    "gender": "female",
+    "description": "Shampoo",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "4",
+    "gender": "female",
+    "description": "Perfume",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "5",
+    "gender": "female",
+    "description": "Deodorant",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "6",
+    "gender": "female",
+    "description": "Sunscreen",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "7",
+    "gender": "female",
+    "description": "Nail Clippers",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "8",
+    "gender": "female",
+    "description": "Hairbrush",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "9",
+    "gender": "female",
+    "description": "Lip Balm",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "10",
+    "gender": "female",
+    "description": "Soap",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "11",
+    "description": "Tops",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "12",
+    "description": "Passport",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "13",
+    "gender": "female",
+    "description": "Sweater",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "14",
+    "gender": "female",
+    "description": "Jacket",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "15",
+    "gender": "female",
+    "description": "Jeans",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "16",
+    "gender": "female",
+    "description": "Shorts",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "17",
+    "gender": "female",
+    "description": "Swim trunks",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "18",
+    "gender": "female",
+    "description": "Underwear",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "19",
+    "gender": "female",
+    "description": "Socks",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "20",
+    "gender": "female",
+    "description": "Shoes",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "21",
+    "gender": "male",
+    "description": "Toothbrush",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "22",
+    "gender": "male",
+    "description": "Toothpaste",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "23",
+    "gender": "male",
+    "description": "Shampoo",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "24",
+    "gender": "male",
+    "description": "Perfume",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "25",
+    "gender": "male",
+    "description": "Deodorant",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "26",
+    "gender": "male",
+    "description": "Sunscreen",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "27",
+    "gender": "male",
+    "description": "Nail Clippers",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "28",
+    "gender": "male",
+    "description": "Hairbrush",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "29",
+    "gender": "male",
+    "description": "Soap",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "30",
+    "gender": "male",
+    "description": "Eye cream",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "toiletries"
+  },
+  {
+    "id": "31",
+    "gender": "male",
+    "description": "Shirts",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "32",
+    "gender": "male",
+    "description": "Passport",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "33",
+    "gender": "male",
+    "description": "Sweater",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "34",
+    "gender": "male",
+    "description": "Jacket",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "35",
+    "gender": "male",
+    "description": "Jeans",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "36",
+    "gender": "male",
+    "description": "Shorts",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "37",
+    "gender": "male",
+    "description": "Swim trunks",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "38",
+    "gender": "male",
+    "description": "ID card",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "39",
+    "gender": "male",
+    "description": "Socks",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  },
+  {
+    "id": "40",
+    "gender": "male",
+    "description": "Driver's license",
+    "quantity": 0,
+    "isPacked": false,
+    "category": "essentials"
+  }
+]

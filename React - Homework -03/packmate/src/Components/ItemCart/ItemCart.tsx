@@ -1,19 +1,19 @@
-import { useContext } from "react";
 import { Item } from "../../models/item.model";
 import "./ItemCart.css";
-import { ItemListContext } from "../../Contexts/ItemListContext";
+import {
+  addQuntityItem,
+  isPacked,
+  removeIsPackedItem,
+  removeQuntityItem,
+} from "../../state/slice/item.slice";
+import { useAppDispatch } from "../../utils/hooks";
 
 interface ItemCartProps {
   item: Item;
 }
 
 function ItemCart({ item }: ItemCartProps) {
-  const {
-    removeQuntityItem,
-    addQuntityItem,
-    removeIsPackedItem,
-    isPackedItem,
-  } = useContext(ItemListContext);
+  const dispatch = useAppDispatch();
 
   return (
     <div className="ItemCart">
@@ -22,7 +22,7 @@ function ItemCart({ item }: ItemCartProps) {
         <p>Quantity:</p>
         <button
           onClick={() => {
-            removeQuntityItem(item);
+            dispatch(removeQuntityItem(item));
           }}
         >
           ➖
@@ -30,7 +30,7 @@ function ItemCart({ item }: ItemCartProps) {
         <p>{item.quantity}</p>
         <button
           onClick={() => {
-            addQuntityItem(item);
+            dispatch(addQuntityItem(item));
           }}
         >
           ➕
@@ -42,10 +42,10 @@ function ItemCart({ item }: ItemCartProps) {
         <button
           className="button"
           onClick={() => {
-            if (item.isPacked) {
-              removeIsPackedItem(item);
+            if (!item.isPacked && item.quantity >= 1) {
+              dispatch(isPacked(item));
             } else {
-              isPackedItem(item);
+              dispatch(removeIsPackedItem(item));
             }
           }}
         >

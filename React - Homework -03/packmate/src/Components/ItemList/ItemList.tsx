@@ -1,15 +1,10 @@
 import "./ItemList.css";
-import ItemCart from "../ItemCart/ItemCart";
-import { useContext } from "react";
-import { ItemListContext } from "../../Contexts/ItemListContext";
 import { Item } from "../../models/item.model";
+import ItemCart from "../ItemCart/ItemCart";
+import { useAppSelector } from "../../utils/hooks";
 
-interface ItemListProps {
-  items: Item[];
-}
-
-function ItemList({ items }: ItemListProps) {
-  const { item } = useContext(ItemListContext);
+function ItemList() {
+  const item: Item[] = useAppSelector((state) => state.item.value);
 
   let sum = 0;
   const totalQuantity = (sum: number) => {
@@ -24,7 +19,7 @@ function ItemList({ items }: ItemListProps) {
       <div className="essentials">
         <h2>Essentials:</h2>
         <div className="essentials-item">
-          {items.map(
+          {item.map(
             (item) =>
               item.category === "essentials" && (
                 <ItemCart key={item.id} item={item} />
@@ -35,7 +30,7 @@ function ItemList({ items }: ItemListProps) {
       <div className="toiletries">
         <h2>Toiletries:</h2>
         <div className="toiletries-item">
-          {items.map(
+          {item.map(
             (item) =>
               item.category === "toiletries" && (
                 <ItemCart key={item.id} item={item} />

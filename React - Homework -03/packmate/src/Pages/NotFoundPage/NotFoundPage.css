@@ -1,0 +1,18 @@
+.item-heading {
+  display: grid;
+  justify-content: center;
+}
+
+.item-heading h2 {
+  margin: 0;
+  font-size: 35px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.item-heading p {
+  font-size: 18px;
+  font-weight: 400;
+  display: grid;
+  justify-content: center;
+}

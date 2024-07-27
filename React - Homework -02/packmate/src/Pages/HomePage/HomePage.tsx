@@ -1,8 +1,13 @@
-import Button from "../../Components/Button/Button";
-import { Link } from "react-router-dom";
 import "./HomePage.css";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
+
+  const navigateToList = (gender: string) => {
+    navigate(`/listpage/${gender}`);
+  };
+
   return (
     <section className="HomePage">
       <div className="homepage-title">
@@ -10,12 +15,8 @@ function HomePage() {
         <h2>ARE YOU:</h2>
       </div>
       <div className="button-container">
-        <Link to="/item-page/male">
-          <Button text="👱MALE" />
-        </Link>
-        <Link to="/item-page/female">
-          <Button text="👩FEMALE" />
-        </Link>
+        <button onClick={() => navigateToList("male")}>👱MALE</button>
+        <button onClick={() => navigateToList("female")}>👩FEMALE</button>
       </div>
     </section>
   );
