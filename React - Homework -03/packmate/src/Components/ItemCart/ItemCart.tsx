@@ -25,7 +25,7 @@ function ItemCart({ item }: ItemCartProps) {
             dispatch(removeQuntityItem(item));
           }}
         >
-          ➖
+          <i className="fa-solid fa-minus"></i>
         </button>
         <p>{item.quantity}</p>
         <button
@@ -33,7 +33,7 @@ function ItemCart({ item }: ItemCartProps) {
             dispatch(addQuntityItem(item));
           }}
         >
-          ➕
+          <i className="fa-solid fa-plus"></i>
         </button>
       </div>
 
@@ -49,7 +49,11 @@ function ItemCart({ item }: ItemCartProps) {
             }
           }}
         >
-          {item.isPacked ? "✅" : "❌"}
+          {item.isPacked ? (
+            <i className="fa-solid fa-check"></i>
+          ) : (
+            <i className="fa-solid fa-xmark"></i>
+          )}
         </button>
       </div>
     </div>

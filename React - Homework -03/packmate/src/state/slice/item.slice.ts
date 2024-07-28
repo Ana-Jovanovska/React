@@ -19,7 +19,7 @@ const itemSlice = createSlice({
     addQuntityItem(state, { payload: selectItem }: PayloadAction<Item>) {
       for (const item of state.value) {
         if (item.id === selectItem.id) {
-          item.quantity + 1;
+          item.quantity++;
           break;
         }
       }
@@ -27,7 +27,7 @@ const itemSlice = createSlice({
     removeQuntityItem(state, { payload: selectItem }: PayloadAction<Item>) {
       for (const item of state.value) {
         if (item.id === selectItem.id && item.quantity !== 0) {
-          item.quantity - 1;
+          item.quantity--;
           break;
         }
       }
