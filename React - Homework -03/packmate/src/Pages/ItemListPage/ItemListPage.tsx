@@ -1,10 +1,13 @@
 import "./ItemListPage.css";
 import { LinkData } from "../../models/core.model";
-import Header from "../../Layout/Header/Header";
+
 import Footer from "../../Layout/Footer/Footer";
 import ItemList from "../../Components/ItemList/ItemList";
+import { useNavigate } from "react-router-dom";
+import Header from "../../Layout/Header/Header";
 
 function ItemListPage() {
+  const navigate = useNavigate();
   const linkDataArr: LinkData[] = [
     {
       path: "/home",
@@ -17,7 +20,15 @@ function ItemListPage() {
       <div className="container">
         <ItemList />
       </div>
-
+      <div className="navigate-btn">
+        <button
+          onClick={() => {
+            navigate("/destination");
+          }}
+        >
+          Next
+        </button>
+      </div>
       <Footer />
     </div>
   );

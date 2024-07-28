@@ -25,14 +25,17 @@
   flex-direction: column;
   gap: 20px;
 }
-.Results {
+
+.results-container {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding: 20px;
-  width: 300px;
-  height: 160px;
-  padding: 30px;
+  justify-content: center;
+}
+.results {
+  width: 400px;
+  height: 220px;
+  padding: 60px;
   border-radius: 15px;
+  gap: 10px;
   background-color: var(--gray);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }

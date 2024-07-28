@@ -15,7 +15,7 @@ function Summary() {
       <div className="Summary">
         <Header title="🧳PackMate" linkDataArr={linkDataArr} />
         <div className="summary-container">
-          <h1>Summary Page</h1>
+          <h1>Summary</h1>
         </div>
         <Footer />
       </div>

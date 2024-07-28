@@ -44,35 +44,37 @@ function ItemList() {
             )}
         </div>
       </div>
-      <div className="Results">
-        <div className="totalItems">
-          <strong>
-            Total items:{item.filter((item) => item.gender === gender).length}
-          </strong>
-        </div>
-        <div className="totalQuantity">
-          <strong>
-            Total quantity:
-            {totalQuantity(sum)}
-          </strong>
-        </div>
-        <div className="countOfPackedItems">
-          <strong>
-            Count of packed items:
-            {
-              item.filter((item) => item.gender === gender && item.isPacked)
-                .length
-            }
-          </strong>
-        </div>
-        <div className="countOfUnpackedItems">
-          <strong>
-            Count of unpacked items:
-            {
-              item.filter((item) => item.gender === gender && !item.isPacked)
-                .length
-            }
-          </strong>
+      <div className="results-container">
+        <div className="results">
+          <div className="totalItems">
+            <strong>
+              Total items:{item.filter((item) => item.gender === gender).length}
+            </strong>
+          </div>
+          <div className="totalQuantity">
+            <strong>
+              Total quantity:
+              {totalQuantity(sum)}
+            </strong>
+          </div>
+          <div className="countOfPackedItems">
+            <strong>
+              Count of packed items:
+              {
+                item.filter((item) => item.gender === gender && item.isPacked)
+                  .length
+              }
+            </strong>
+          </div>
+          <div className="countOfUnpackedItems">
+            <strong>
+              Count of unpacked items:
+              {
+                item.filter((item) => item.gender === gender && !item.isPacked)
+                  .length
+              }
+            </strong>
+          </div>
         </div>
       </div>
     </div>

@@ -41,59 +41,62 @@ function TripDetailsPage() {
   return (
     <section className="TripDetailsPage">
       <Header title="🧳PackMate" linkDataArr={linkDataArr} />
-      <h1>Trip Details Page</h1>
-      <form
-        className="trip-form"
-        onSubmit={handleSubmit((item) => {
-          dispatch(onSubmit(item));
-        })}
-      >
-        <input
-          type="text"
-          placeholder="First Name"
-          {...register("firstName", {
-            required: { value: true, message: "First Name is required!" },
+      <h1>Trip Details</h1>
+      <div className="trip-dtails-container">
+        <form
+          className="trip-form"
+          onSubmit={handleSubmit((item) => {
+            dispatch(onSubmit(item));
           })}
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          {...register("lastName", {
-            required: { value: true, message: "Last Name is required!" },
-          })}
-        />
-        <input
-          type="text"
-          placeholder="Date of Birth"
-          {...register("dateOfBirth", {
-            required: { value: true, message: "Date of birth is required!" },
-          })}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          {...register("email", {
-            required: { value: true, message: "Email is required!" },
-          })}
-        />
-        <input
-          type="text"
-          placeholder="Phone number"
-          {...register("phoneNumber", {
-            required: { value: true, message: "Phone number is required!" },
-          })}
-        />
-        <div className="error">
-          <div>
-            {!isValid && isSubmitted ? (
-              <div>All fields are required</div>
-            ) : null}
+        >
+          <input
+            type="text"
+            placeholder="First Name"
+            {...register("firstName", {
+              required: { value: true, message: "First Name is required!" },
+            })}
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            {...register("lastName", {
+              required: { value: true, message: "Last Name is required!" },
+            })}
+          />
+          <input
+            type="text"
+            placeholder="Date of Birth"
+            {...register("dateOfBirth", {
+              required: { value: true, message: "Date of birth is required!" },
+            })}
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            {...register("email", {
+              required: { value: true, message: "Email is required!" },
+            })}
+          />
+          <input
+            type="text"
+            placeholder="Phone number"
+            {...register("phoneNumber", {
+              required: { value: true, message: "Phone number is required!" },
+            })}
+          />
+          <div className="error">
+            <div>
+              {!isValid && isSubmitted ? (
+                <div>All fields are required</div>
+              ) : null}
+            </div>
+            <button className="add-button" type="submit">
+              Submit
+            </button>
           </div>
-          <button className="add-button" type="submit">
-            Submit
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
+
       {isValid && isSubmitted && (
         <div className="btn">
           <button
