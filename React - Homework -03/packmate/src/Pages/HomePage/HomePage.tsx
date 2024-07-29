@@ -10,12 +10,16 @@ function HomePage() {
         <h2>ARE YOU:</h2>
       </div>
       <div className="button-container">
-        <Link to="/item-page/male">
-          <Button text="👱MALE" />
-        </Link>
-        <Link to="/item-page/female">
-          <Button text="👩FEMALE" />
-        </Link>
+        <div className="male">
+          <Link to="/item-page/female">
+            <Button text="MALE" />
+          </Link>
+        </div>
+        <div className="female">
+          <Link to="/item-page/female">
+            <Button text="FEMALE" />
+          </Link>
+        </div>
       </div>
     </section>
   );

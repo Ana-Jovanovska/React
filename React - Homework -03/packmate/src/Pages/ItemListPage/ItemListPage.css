@@ -15,5 +15,34 @@
   background-color: var(--gray);
   color: var(--black);
   font-size: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 30px;
+  gap: 20px;
+}
+
+.add-button {
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+  cursor: pointer;
+  background-color: var(--gray);
+  color: var(--black);
+  font-size: 15px;
+}
+.sort-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+.sort-group button {
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+  cursor: pointer;
+  background-color: var(--gray);
+  color: var(--black);
+  font-size: 15px;
 }

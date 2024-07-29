@@ -25,7 +25,7 @@ function Destination() {
             navigate("/trip-details");
           }}
         >
-          Next
+          <i className="fa-solid fa-hand-point-right"></i>
         </button>
       </div>
       <Footer />

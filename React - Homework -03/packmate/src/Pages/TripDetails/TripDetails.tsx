@@ -104,7 +104,7 @@ function TripDetailsPage() {
               navigate("/summary");
             }}
           >
-            Next
+            <i className="fa-solid fa-hand-point-right"></i>
           </button>
         </div>
       )}

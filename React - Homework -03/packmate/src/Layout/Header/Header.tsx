@@ -12,7 +12,7 @@ function Header({ title, linkDataArr }: HeaderProps) {
   return (
     <header className="Header">
       <h1>
-        <Link to="/products" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/home" style={{ textDecoration: "none", color: "black" }}>
           {title}
         </Link>
       </h1>
