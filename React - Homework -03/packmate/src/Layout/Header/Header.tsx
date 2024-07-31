@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Navbar from "../../Components/NavBar/NavBar";
 import { LinkData } from "../../models/core.model";
 import "./Header.css";
@@ -11,11 +10,7 @@ interface HeaderProps {
 function Header({ title, linkDataArr }: HeaderProps) {
   return (
     <header className="Header">
-      <h1>
-        <Link to="/home" style={{ textDecoration: "none", color: "black" }}>
-          {title}
-        </Link>
-      </h1>
+      <h1>{title}</h1>
       <Navbar linkDataArr={linkDataArr} />
     </header>
   );

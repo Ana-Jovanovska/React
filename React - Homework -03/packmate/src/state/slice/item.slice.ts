@@ -48,6 +48,62 @@ const itemSlice = createSlice({
         }
       }
     },
+
+    addNewItem(state, { payload: { title, category, gender } }) {
+      const findItems = state.value.find((item) => item.description === title);
+
+      console.log(findItems);
+
+      const newItems: Item = {
+        id: "1",
+        gender: gender,
+        description: title,
+        quantity: 0,
+        isPacked: false,
+        category: category,
+      };
+      state.value = [...state.value, newItems];
+    },
+
+    sortItem(state, { payload: query }: PayloadAction<string>) {
+      let copyStateValue = [...state.value];
+      if (query === "title") {
+        for (const item of state.value) {
+          console.log(item);
+          copyStateValue.sort((a, b) =>
+            b.description > a.description ? 1 : -1
+          );
+        }
+      }
+      if (query === "quantity") {
+        for (const item of state.value) {
+          console.log(item);
+          copyStateValue.sort((a, b) =>
+            Number(b.quantity) > Number(a.quantity) ? 1 : -1
+          );
+        }
+      }
+      if (query === "isPacked") {
+        for (const item of state.value) {
+          console.log(item);
+          copyStateValue.sort((a, b) => (b.isPacked > a.isPacked ? 1 : -1));
+        }
+      }
+      if (query === "isNotPacked") {
+        for (const item of state.value) {
+          console.log(item);
+          copyStateValue.sort((a, b) => (!b.isPacked > !a.isPacked ? 1 : -1));
+        }
+      }
+      state.value = copyStateValue;
+    },
+
+    resetItem(state) {
+      for (const item of state.value) {
+        item.quantity = 0;
+        item.isPacked = false;
+      }
+    },
   },
 });
 
@@ -56,6 +112,9 @@ export const {
   removeQuntityItem,
   isPacked,
   removeIsPackedItem,
+  addNewItem,
+  sortItem,
+  resetItem,
 } = itemSlice.actions;
 
 export default itemSlice;

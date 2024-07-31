@@ -4,3 +4,47 @@
   font-weight: 400;
   font-size: 40px;
 }
+.summary-container {
+  margin-bottom: 20px;
+}
+
+.itemPage,
+.tripDetailsPage {
+  width: 500px;
+  background-color: var(--gray);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.itemPage h2,
+.tripDetailsPage h2 {
+  border-bottom: 2px solid var(--gray);
+  padding-bottom: 10px;
+  color: var(--black);
+}
+
+.itemPage_container,
+.tripDetailsPage_container {
+  margin-top: 10px;
+}
+
+.summery-item-div,
+.trip-details-info-div {
+  margin-bottom: 10px;
+}
+
+.summery-item-div p,
+.trip-details-info-div p {
+  margin: 5px 0;
+}
+
+.summery-item-div p {
+  color: var(--black);
+}
+
+.trip-details-info-div p {
+  font-weight: bold;
+  color: var(--black);
+}

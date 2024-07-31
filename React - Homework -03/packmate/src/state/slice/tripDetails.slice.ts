@@ -20,5 +20,4 @@ const tripDetailsSlice = createSlice({
 });
 
 export const { onSubmit } = tripDetailsSlice.actions;
-
 export default tripDetailsSlice;

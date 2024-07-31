@@ -11,7 +11,7 @@ function HomePage() {
       </div>
       <div className="button-container">
         <div className="male">
-          <Link to="/item-page/female">
+          <Link to="/item-page/male">
             <Button text="MALE" />
           </Link>
         </div>
