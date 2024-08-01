@@ -1,41 +1,36 @@
-import { useState } from "react";
-import { useFetchCountries } from "../../state/slice/destination.slice";
-import { useAppDispatch } from "../../utils/hooks";
-import { setDestination } from "../../state/slice/destination.slice";
+import "./Destination.css";
+import { LinkData } from "../../models/core.model";
+import Header from "../../Layout/Header/Header";
+import Footer from "../../Layout/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
-const DestinationPage = () => {
-  const { countries, loading, error } = useFetchCountries();
-  const dispatch = useAppDispatch();
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredCountries = countries.filter((country) =>
-    country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
-
+function Destination() {
+  const navigate = useNavigate();
+  const linkDataArr: LinkData[] = [
+    {
+      path: "/home",
+      text: "HOME",
+    },
+  ];
   return (
-    <div>
-      <h1>Destination Page</h1>
-      <input
-        type="text"
-        placeholder="Search countries..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ marginBottom: "20px", padding: "10px", width: "300px" }}
-      />
-      {filteredCountries.map((country) => (
-        <div
-          key={country.name.common}
-          onClick={() => dispatch(setDestination(country.name.common))}
-          style={{ cursor: "pointer", margin: "5px 0" }}
+    <div className="Destination">
+      <div className="destination-container">
+        <Header title="🧳PackMate" linkDataArr={linkDataArr} />
+        <h1>Destination</h1>
+        <div className="search-destination"></div>
+      </div>
+      <div className="country"></div>
+      <div className="navigate-btn">
+        <button
+          onClick={() => {
+            navigate("/trip-details");
+          }}
         >
-          {country.name.common}
-        </div>
-      ))}
+          <i className="fa-solid fa-hand-point-right"></i>
+        </button>
+      </div>
+      <Footer />
     </div>
   );
-};
-
-export default DestinationPage;
+}
+export default Destination;

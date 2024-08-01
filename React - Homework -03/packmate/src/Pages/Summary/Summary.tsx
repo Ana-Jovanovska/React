@@ -7,7 +7,6 @@ import "./Summary.css";
 function Summary() {
   const item = useAppSelector((state) => state.item.value);
   const tripDetailsPage = useAppSelector((state) => state.tripDetails.value);
-  const destinationPage = useAppSelector((state) => state.destination);
 
   const linkDataArr: LinkData[] = [
     {
@@ -36,12 +35,6 @@ function Summary() {
                 </div>
               ))}
           </div>
-        </div>
-        <div className="summery-destination-div">
-          <h2>Your destination:</h2>
-          {destinationPage !== null ? (
-            <div className="destination-card"></div>
-          ) : null}
         </div>
         <div className="tripDetailsPage">
           <h2>Trip details:</h2>
