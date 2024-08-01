@@ -42,6 +42,17 @@ function TripDetailsPage() {
     <section className="TripDetailsPage">
       <Header title="🧳PackMate" linkDataArr={linkDataArr} />
       <h1>Trip Details</h1>
+      {isValid && isSubmitted && (
+        <div className="btn">
+          <button
+            onClick={() => {
+              navigate("/summary");
+            }}
+          >
+            <i className="fa-solid fa-hand-point-right"></i>
+          </button>
+        </div>
+      )}
       <div className="trip-dtails-container">
         <form
           className="trip-form"
@@ -96,18 +107,6 @@ function TripDetailsPage() {
           </div>
         </form>
       </div>
-
-      {isValid && isSubmitted && (
-        <div className="btn">
-          <button
-            onClick={() => {
-              navigate("/summary");
-            }}
-          >
-            <i className="fa-solid fa-hand-point-right"></i>
-          </button>
-        </div>
-      )}
       <Footer />
     </section>
   );

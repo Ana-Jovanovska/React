@@ -36,6 +36,8 @@ function Summary() {
               ))}
           </div>
         </div>
+        <div className="destinationPage"></div>
+
         <div className="tripDetailsPage">
           <h2>Trip details:</h2>
           <div className="tripDetailsPage_container">

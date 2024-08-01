@@ -90,9 +90,6 @@ function ItemListPage() {
           <i className="fa-solid fa-arrows-rotate"></i>
         </button>
       </div>
-      <div className="container">
-        <ItemList />
-      </div>
       <div className="navigate-btn">
         <button
           onClick={() => {
@@ -101,6 +98,9 @@ function ItemListPage() {
         >
           <i className="fa-solid fa-hand-point-right"></i>
         </button>
+      </div>
+      <div className="container">
+        <ItemList />
       </div>
       <Footer />
     </div>
