@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Item } from "../../models/item.model";
 import dataItemJSON from "../../data/dataItem.json";
+import { v4 as uuid } from "uuid";
 
 interface ItemState {
   value: Item[];
@@ -52,17 +53,17 @@ const itemSlice = createSlice({
     addNewItem(state, { payload: { title, category, gender } }) {
       const findItems = state.value.find((item) => item.description === title);
 
-      console.log(findItems);
+      if (findItems) return;
 
-      const newItems: Item = {
-        id: "1",
+      const newItem: Item = {
+        id: uuid(),
         gender: gender,
         description: title,
         quantity: 0,
         isPacked: false,
         category: category,
       };
-      state.value = [...state.value, newItems];
+      state.value = [...state.value, newItem];
     },
 
     sortItem(state, { payload: query }: PayloadAction<string>) {

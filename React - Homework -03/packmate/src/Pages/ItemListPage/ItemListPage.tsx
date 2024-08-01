@@ -32,12 +32,14 @@ function ItemListPage() {
           <input
             type="text"
             placeholder="Please add new item..."
+            value={title}
             onChange={(event) => {
               setTitle(event.target.value);
             }}
           />
           <select
             className="category-select"
+            value={category}
             onChange={(event) => {
               setCategory(event.target.value);
             }}
