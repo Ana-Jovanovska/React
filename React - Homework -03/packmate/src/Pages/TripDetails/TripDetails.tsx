@@ -41,7 +41,7 @@ function TripDetailsPage() {
   return (
     <section className="TripDetailsPage">
       <Header title="🧳PackMate" linkDataArr={linkDataArr} />
-      <h1>Trip Details</h1>
+
       {isValid && isSubmitted && (
         <div className="btn">
           <button

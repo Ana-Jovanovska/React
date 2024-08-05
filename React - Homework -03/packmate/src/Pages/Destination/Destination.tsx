@@ -42,7 +42,6 @@ function Destination() {
     <div className="Destination">
       <div className="destination-container">
         <Header title="🧳PackMate" linkDataArr={linkDataArr} />
-        <h1>Destination</h1>
       </div>
       <div className="container">
         <input

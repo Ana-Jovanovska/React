@@ -1,9 +1,3 @@
-.TripDetailsPage h1 {
-  display: flex;
-  justify-content: center;
-  font-weight: 400;
-  font-size: 40px;
-}
 .trip-dtails-container {
   display: flex;
   justify-content: center;

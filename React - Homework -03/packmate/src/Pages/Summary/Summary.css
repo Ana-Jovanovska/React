@@ -1,50 +1,111 @@
-.summary-container h1 {
-  display: grid;
-  justify-content: center;
-  font-weight: 400;
-  font-size: 40px;
-}
-.summary-container {
-  margin-bottom: 20px;
-}
-
-.itemPage,
-.tripDetailsPage {
-  width: 500px;
-  background-color: var(--gray);
-  border-radius: 8px;
+.itemPage {
+  margin: 20px;
   padding: 20px;
-  margin-bottom: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  background-color: var(--gray);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-.itemPage h2,
-.tripDetailsPage h2 {
-  border-bottom: 2px solid var(--gray);
-  padding-bottom: 10px;
+.itemPage h2 {
+  margin-bottom: 15px;
   color: var(--black);
 }
 
-.itemPage_container,
-.tripDetailsPage_container {
-  margin-top: 10px;
+.itemPage_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.summery-item-div,
-.trip-details-info-div {
-  margin-bottom: 10px;
+.itemPageInfo {
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 6px;
+  background-color: var(--white);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-.summery-item-div p,
-.trip-details-info-div p {
+.itemPageInfo p {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--black);
+}
+
+.destinationPage {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  background-color: var(--gray);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destinationPage h2 {
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.destinationPage_container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.destinationPage_container .image {
+  flex: 0 0 auto;
+}
+
+.destinationPage_container .image img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--white);
+}
+
+.destinationPage_container .countryInfo {
+  flex: 1;
+}
+
+.destinationPage_container .countryInfo h3 {
+  margin: 0 0 10px 0;
+  color: var(--black);
+}
+
+.destinationPage_container .countryInfo p {
   margin: 5px 0;
-}
-
-.summery-item-div p {
   color: var(--black);
 }
 
-.trip-details-info-div p {
-  font-weight: bold;
+.tripDetailsPage {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  background-color: var(--gray);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tripDetailsPage h2 {
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.tripDetailsPage_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tripDetailsPageInfo {
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 6px;
+  background-color: var(--white);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tripDetailsPageInfo p {
+  margin: 5px 0;
   color: var(--black);
 }
